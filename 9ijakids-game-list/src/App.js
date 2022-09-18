@@ -16,7 +16,14 @@ function App() {
 
       setCatalog(Data.filter(item => item.GameTitle.toLowerCase().includes(value.trim().toLowerCase()) ||
         item.GameTitle.toLowerCase() === value.toLowerCase() ||
-        item.GameDescription.toLowerCase().includes(value.trim().toLowerCase())))
+        item.GameDescription.toLowerCase().includes(value.trim().toLowerCase()) ||
+        item.Level.toLowerCase().includes(value.trim().toLowerCase()) ||
+        item.Level.toLowerCase() === value.trim().toLowerCase() ||
+        item.Subject.toLowerCase().includes(value.trim().toLowerCase()) ||
+        item.Subject.toLowerCase() === value.trim().toLowerCase() ||
+        item.Topic.toLowerCase().includes(value.trim().toLowerCase()) ||
+        item.Topic.toLowerCase() === value.trim().toLowerCase()
+      ))
     }
 
 
@@ -26,7 +33,7 @@ function App() {
     <div className="App">
       <Header Func={searchFunc} />
       {catalog.length !== 0 ? <Main Data={catalog} /> : <h1 style={{
-        textAlign:"center"
+        textAlign: "center"
       }}>No Games found</h1>}
       <Footer />
     </div>
