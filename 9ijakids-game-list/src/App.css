@@ -1,0 +1,59 @@
+body {
+  background: #f8f8f8;
+}
+
+.Header {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.Header form input {
+  outline: none;
+  border: 1px solid #002147;
+  padding: 4px;
+  height: 25px;
+  width: 30%;
+}
+
+.Header form button {
+  border: none;
+  padding: 10px;
+  background: #002147;
+  color: white;
+  cursor: pointer;
+}
+
+.Main {
+  color: #002147;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5%;
+  padding: 50px 0;
+}
+
+.Card {
+  width: 25%;
+  background: white;
+  height: auto;
+  margin: 20px 0;
+}
+.Card:hover{
+  scale: 1.08;
+  transition: all ease-in-out 0.5s;
+}
+.Card .details {
+  padding: 10px 30px 20px;
+}
+
+.Card .img {
+  height: 200px;
+}
+
+.Card .img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
