@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Header = ({ Func }) => {
+const Header = ({ filter, Func, filterFunc }) => {
 
     const [searchValue, setSearchValue] = useState("")
 
@@ -20,6 +20,18 @@ const Header = ({ Func }) => {
                 />
                 <button>Search</button>
             </form>
+
+            <div className='Filter'>
+                {
+                    filter.map((item, index) => {
+                        return <p
+                            key={index}
+                            onClick={() => {
+                                filterFunc(item)
+                            }}
+                        >{item}</p>
+                    })
+                }            </div>
         </div>
     )
 }
